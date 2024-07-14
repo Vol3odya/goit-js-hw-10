@@ -15,6 +15,7 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future'
       });
+      button.disabled=true;
     } else {
       button.disabled=false;
     }
@@ -67,6 +68,7 @@ function timer() {
     if (offtime - new Date() <= 0) {
       clearInterval(interval);
       input.disabled = false;
+      //button.disabled = false;
       return;
     }
     if (convertMs(offtime - new Date()).days < 10) {
